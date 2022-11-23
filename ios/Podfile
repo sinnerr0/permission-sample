@@ -26,6 +26,10 @@ target 'PermissionSample' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
+  permissions_path = '../node_modules/react-native-permissions/ios'
+  
+  pod 'Permission-LocationWhenInUse', :path => "#{permissions_path}/LocationWhenInUse"
+
   target 'PermissionSampleTests' do
     inherit! :complete
     # Pods for testing
